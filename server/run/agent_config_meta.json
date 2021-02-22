@@ -1,0 +1,358 @@
+{
+  "keys": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+  "middleware": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+  "httpLog": {
+    "type": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js"
+  },
+  "security": {
+    "csrf": {
+      "enable": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+      "type": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "refererWhiteList": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    },
+    "domainWhiteList": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "maxAge": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "view": {
+    "mapping": {
+      ".html": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js"
+    },
+    "root": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "cache": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-view/config/config.default.js",
+    "defaultExtension": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-view/config/config.default.js"
+  },
+  "ejs": {
+    "delimiter": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "root": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-view-ejs/config/config.default.js",
+    "cache": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-view-ejs/config/config.default.js",
+    "debug": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-view-ejs/config/config.default.js",
+    "compileDebug": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-view-ejs/config/config.default.js",
+    "strict": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-view-ejs/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "dir": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "dynamic": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-static/config/config.default.js",
+    "preload": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-static/config/config.default.js",
+    "buffer": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-static/config/config.prod.js",
+    "maxFiles": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-static/config/config.default.js",
+    "maxAge": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-static/config/config.prod.js"
+  },
+  "session": {
+    "key": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "httpOnly": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "maxAge": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "renew": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "encrypt": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-session/config/config.default.js"
+  },
+  "auth": {
+    "exclude": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js"
+  },
+  "mysql": {
+    "app": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "agent": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "client": {
+      "host": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+      "port": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+      "user": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+      "password": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+      "database": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js"
+    },
+    "default": {
+      "database": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-mysql/config/config.default.js",
+      "connectionLimit": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-mysql/config/config.default.js"
+    }
+  },
+  "sequelize": {
+    "dialect": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "host": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "port": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "user": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "password": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "database": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "define": {
+      "timestamps": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+      "freezeTableName": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js"
+    },
+    "username": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-sequelize/config/config.default.js"
+  },
+  "jwt": {
+    "secret": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+    "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-jwt/config/config.default.js"
+  },
+  "redis": {
+    "client": {
+      "port": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+      "host": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+      "password": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+      "db": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js"
+    },
+    "default": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-redis/config/config.default.js",
+    "app": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-redis/config/config.default.js",
+    "agent": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-redis/config/config.default.js",
+    "supportTimeCommand": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-redis/config/config.default.js"
+  },
+  "salt": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+  "redisExpire": "/Users/xinxin/Desktop/demo/react_egg/server/config/config.default.js",
+  "helper": {
+    "shtml": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-i18n/config/config.default.js",
+    "cookieDomain": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-watcher/config/config.default.js",
+    "eventSources": {
+      "default": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-schedule/config/config.default.js",
+      "file": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-schedule/config/config.default.js"
+  },
+  "multipart": {
+    "mode": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "autoFields": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "validate": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg-validate/config/config.default.js",
+  "env": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "name": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "cookies": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "maxIpsCount": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "maxProxyCount": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "version": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "description": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "private": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "egg": {
+      "declarations": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "dayjs": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg-jwt": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg-mysql": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg-redis": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg-sequelize": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg-validate": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg-view-ejs": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "md5": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "mysql2": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "autod": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "autod-egg": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg-bin": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg-ci": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "egg-mock": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "eslint": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "stop": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "dev": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "debug": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "test": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "test-local": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "cov": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "lint": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "ci": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "autod": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "url": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    },
+    "author": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "license": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+  },
+  "baseDir": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "textLimit": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "strict": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "depth": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    },
+    "onerror": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+  },
+  "logger": {
+    "dir": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "env": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "level": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "coreLogger": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "allowDebugAtProd": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "logging": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "serverTimeout": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "port": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+      "hostname": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/Users/xinxin/Desktop/demo/react_egg/server/node_modules/egg/config/config.default.js"
+}
