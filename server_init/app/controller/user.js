@@ -243,6 +243,51 @@ class UserController extends Controller {
       }
     }
   }
+  async detail() {
+    const { ctx } = this;
+    console.log(ctx.username, "ctx-ctx")
+
+    const user = await ctx.service.user.getUser(ctx.username)
+    console.log(user, "user-user-user-user")
+    if (user) {
+      ctx.body = {
+        status: 200,
+        data: {
+          ...ctx.helper.unPick(user.dataValues, ['password']),
+          createTime: ctx.helper.timestamp(user.createTime)
+        }
+      }
+    } else {
+      ctx.body = {
+        status: 500,
+        errMsg: "该用户不存在"
+
+      }
+    }
+
+
+  }
+  async logout(){
+    const { ctx,app } = this;
+    try{
+      ctx.session[ctx.username] = null;
+      ctx.body = {
+        status:200,
+        data:"ok"
+      }
+      // await app.redis.del(ctx.username);
+      // this.success('ok');
+      
+    }catch(error){
+      // this.error('退出登录失败');
+      ctx.body = {
+        status:500,
+        errMsg:"退出登录失败"
+      }
+    }
+
+  }
+    
 }
 
 
