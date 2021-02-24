@@ -245,10 +245,7 @@ class UserController extends Controller {
   }
   async detail() {
     const { ctx } = this;
-    console.log(ctx.username, "ctx-ctx")
-
     const user = await ctx.service.user.getUser(ctx.username)
-    console.log(user, "user-user-user-user")
     if (user) {
       ctx.body = {
         status: 200,
@@ -261,11 +258,8 @@ class UserController extends Controller {
       ctx.body = {
         status: 500,
         errMsg: "该用户不存在"
-
       }
     }
-
-
   }
   async logout(){
     const { ctx,app } = this;

@@ -56,7 +56,7 @@ module.exports = appInfo => {
   };
 
   config.auth = {
-    exclude: ['/home', '/user', '/login', '/logout']
+    exclude: ['/api/user/login', '/api/user/register'] // 这两个接口不需要认证
   };
 
   config.mysql = {
