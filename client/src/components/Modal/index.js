@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CreatePortal from '../CreatePortal';
-import { Icon } from 'antd-mobile'; 
+import { Icon } from 'antd-mobile';
 
 const Styles = {
   modal: {
@@ -36,13 +36,13 @@ export default class Modal extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps) {
     this.setState({
       showModal: nextProps.show
     });
   }
 
-  handleClose = ()=>{
+  handleClose = () => {
     const { onClose } = this.props;
     onClose && onClose();
   }
@@ -63,7 +63,11 @@ export default class Modal extends Component {
         {showModal ? <CreatePortal style={Styles.modal}>
           <div style={_styleBody}>
             {this.props.children}
-            <Icon type='cross' size='lg' style={_styleClose} onClick={this.handleClose} />
+            <Icon
+              type='cross'
+              size='lg'
+              style={_styleClose}
+              onClick={this.handleClose} />
           </div>
         </CreatePortal> : null}
       </>

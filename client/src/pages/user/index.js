@@ -23,9 +23,7 @@ export default function (props) {
   };
 
   useEffect(() => {
-    getUserAsync({
-      id: 10
-    });
+    getUserAsync();
   }, [])
 
   return (

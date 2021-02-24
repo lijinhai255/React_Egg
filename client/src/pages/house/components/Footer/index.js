@@ -22,12 +22,12 @@ export default function (props) {
   };
 
   const handleSubmit = () => {
-    if(commentsValue){
+    if (commentsValue) {
       handleClose();
       addCommentsAsync({
         comment: commentsValue
       });
-    }else {
+    } else {
       Toast.fail('请添加信息');
     }
   };
@@ -56,7 +56,11 @@ export default function (props) {
             count={200}
             onChange={handleChange}
           />
-          <Button className='comment-btn' type='warning' onClick={handleSubmit}>评论</Button>
+          <Button
+            className='comment-btn'
+            type='warning'
+            onClick={handleSubmit}>
+            评论</Button>
         </div>
       </Modal>
     </>

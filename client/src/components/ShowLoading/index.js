@@ -13,7 +13,9 @@ export default function ShowLoading(props) {
 
   return (
     <div>
-      {props.showLoading ? <div id={CommonEnum.LOADING_ID} className='loading-info'>loading</div> : <div className='loading-info'>没有数据了~</div>}
+      {props.showLoading ? 
+      <div id={CommonEnum.LOADING_ID} className='loading-info'>loading</div> : 
+      <div className='loading-info'>没有数据了~</div>}
     </div>
   )
 }

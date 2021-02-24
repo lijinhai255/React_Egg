@@ -26,10 +26,9 @@ export default {
     }
   },
   effects: {
-    async getUserAsync(dispatch, rootState, payload){
+    async getUserAsync(dispatch, rootState,){
       const user = await Http({
         url: '/user/detail',
-        body: payload
       });
       if(user){
         dispatch({
@@ -49,17 +48,19 @@ export default {
       }
     },
     async loginAsync(dispatch, rootState, payload){
+      console.log(payload,"payload-payload")
       const result = await Http({
         url: '/user/login',
         body: payload
       });
       if(result){
-        // console.log(urlGet('from'))
-        // cookie.set('user', result);
+        console.log(urlGet('from'))
+        cookie.set('user', result);
         localStorage.setItem('token', result.token);
         localStorage.setItem('username', result.username);
-        urlGet('from') && history.push(urlGet('from'));
+        urlGet('from') ? history.push(urlGet('from')):history.push("/");
         Toast.success('登录成功');
+
       }
     },
     async registerAsync(dispatch, rootState, payload){
@@ -68,7 +69,7 @@ export default {
         body: payload
       });
       if(result){
-        // cookie.set('user', result);
+        cookie.set('user', result);
         localStorage.setItem('token', result.token);
         localStorage.setItem('username', result.username);
         Toast.success('注册成功');

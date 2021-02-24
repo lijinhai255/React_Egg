@@ -21,6 +21,6 @@ export default function useHttpHook({
       setLoading
     });
   }, watch);
-
+  // console.log(result,loading,"121-1212");
   return [result, loading];
 }

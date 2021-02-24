@@ -4,6 +4,16 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  mock: false,
+  proxy: {
+    '/api': {
+      'target': 'http://localhost:7002/',
+      'changeOrigin': true,
+    }
+  },
+  // history: {
+  //   type: 'hash'
+  // },
   routes: [
     {
       path: '/',

@@ -36,7 +36,7 @@ export default class MenuBar extends Component {
 
   render() {
     const { show, pathname } = this.props;
-    console.log(this.props)
+    // console.log(this.props)
 
     return (
       <div className='menu-bar'>

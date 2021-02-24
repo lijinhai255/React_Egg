@@ -182,6 +182,7 @@ class UserController extends Controller {
     const token = app.jwt.sign({
       username
     }, app.config.jwt.secret)
+    await app.redis.set(username, 1,'EX',app.config.redisExpire)
     return token
   }
   async register() {
