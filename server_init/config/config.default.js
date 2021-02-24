@@ -77,16 +77,21 @@ module.exports = appInfo => {
     port: '3306',
     user: 'root',
     password: 'abc123456',
-    database: 'egg',
+    database: 'egg_house',
     define: {
       timestamps: false,
       freezeTableName: true
     }
   };
+  config.jwt = {
+    secret: 'muke'
+  };
 
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
+     salt: 'muke',
+     redisExpire: 60 * 60 * 24
   };
 
   return {

@@ -1,7 +1,7 @@
 'use strict';
 
 const Service = require('egg').Service;
-
+const md5 = require('md5');
 class UserService extends Service {
   async lists() {
     try {
@@ -67,6 +67,37 @@ class UserService extends Service {
       console.log(error);
       return null;
     }
+  }
+  // 新增 方法 ------
+  // 查找用户
+  async getUser(username,password) {
+    try{
+      const { ctx, app } = this;
+      const _where = password ? { username, password: md5(password + app.config.salt) } : { username };
+      const result = await ctx.model.User.findOne({
+        where: _where
+      });
+      return result
+    }catch(error) {
+      console.log(error);
+      return null;
+    }
+
+  }
+  // 新增方法
+  async addUser(params) {
+    // console.log(params,"jll")
+    try{
+      const {ctx} = this;
+      const result = await ctx.model.User.create(params)
+      // console.log(result,"result-result");
+      return result
+    }catch(error){
+      console.log(error);
+      return null;
+
+    }
+
   }
 }
 

@@ -24,6 +24,7 @@ class CurlController extends Controller {
     console.log(res);
     ctx.body = res.data;
   }
+  
 }
 
 module.exports = CurlController;

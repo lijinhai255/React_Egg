@@ -21,4 +21,7 @@ module.exports = app => {
   router.post('/logout', controller.user.logout);
   router.get('/curl/get', controller.curl.curlGet);
   router.post('/curl/post', controller.curl.curlPost);
+  // 新增
+  router.post("/api/user/register", controller.user.register);
+  router.post("/api/user/login", controller.user.login);
 };

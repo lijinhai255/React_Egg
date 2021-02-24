@@ -1,17 +1,17 @@
 'use strict';
 
 const Controller = require('egg').Controller;
-
+const md5 = require('md5');
 class UserController extends Controller {
-  encode(str = ''){
+  encode(str = '') {
     return new Buffer(str).toString("base64");
   }
-  decode(str = ''){
+  decode(str = '') {
     return new Buffer(str, "base64").toString();
   }
   async index() {
     const { ctx } = this;
-    
+
     // 获取session
     const session = ctx.session.user;
     const zhSession = ctx.session.zh;
@@ -47,7 +47,7 @@ class UserController extends Controller {
     });
   }
 
-  async login(){
+  async login() {
     const { ctx } = this;
     const body = ctx.request.body;
     ctx.cookies.set("user", JSON.stringify(body), {
@@ -66,7 +66,7 @@ class UserController extends Controller {
     };
   }
 
-  async logout(){
+  async logout() {
     const { ctx } = this;
     ctx.cookies.set("user", null);
 
@@ -85,7 +85,7 @@ class UserController extends Controller {
     //     resolve();
     //   }, 1500);
     // });
-    console.log(ctx.service,"ctx.service")
+    console.log(ctx.service, "ctx.service")
     // const res = await ctx.service.user.lists();
     // console.log(res,"res-res")
     const res = await ctx.model.User.findAll({
@@ -98,7 +98,7 @@ class UserController extends Controller {
     // {
     //   // where: {
     //   //   id: 2
-      
+
     //   // limit: 1,
     //   // offset: 1
     // }
@@ -142,10 +142,10 @@ class UserController extends Controller {
 
   async edit() {
     const { ctx } = this;
-    console.log(ctx.request.body,"ctx.request.body-ctx.request.body")
+    console.log(ctx.request.body, "ctx.request.body-ctx.request.body")
     // const res = await ctx.service.user.edit(ctx.request.body);
     const user = await ctx.model.User.findByPk(ctx.request.body.id);
-    if(!user){
+    if (!user) {
       ctx.body = {
         status: 404,
         errMsg: 'id不存在'
@@ -162,7 +162,7 @@ class UserController extends Controller {
     const { ctx } = this;
     // const res = await ctx.service.user.delete(ctx.request.body.id);
     const user = await ctx.model.User.findByPk(ctx.request.body.id);
-    if(!user){
+    if (!user) {
       ctx.body = {
         status: 404,
         errMsg: 'id不存在'
@@ -175,6 +175,75 @@ class UserController extends Controller {
       data: res,
     };
   }
+  // 新增 方法
+  async jwtSign() {
+    const { ctx, app } = this;
+    const username = ctx.request.body.username;
+    const token = app.jwt.sign({
+      username
+    }, app.config.jwt.secret)
+    return token
+  }
+  async register() {
+    const { ctx, app } = this;
+    const params = ctx.request.body;
+    // console.log(params,"params-params-params")
+    const user = await ctx.service.user.getUser(params.username);
+    if (user) {
+      ctx.body = {
+        status: 500,
+        errMsg: '用户已经存在'
+      }
+      return;
+    }
+    // console.log(ctx.helper,"ctx.helper-ctx.helperctx.helper")
+    const result = await ctx.service.user.addUser({
+      ...params,
+      password: md5(params.password + app.config.salt),
+      createTime: ctx.helper.time()
+    });
+    // console.log(result,"result-result")
+    if (result) {
+      const token = await this.jwtSign()
+      ctx.body = {
+        status: 200,
+        data: {
+          ...ctx.helper.unPick(result.dataValues, ['password']),
+          createTime: ctx.helper.timestamp(result.createTime),
+          token
+        }
+      }
+    } else {
+      ctx.body = {
+        status: 500,
+        errMsg: "用户注册失败"
+      }
+    }
+  }
+  async login() {
+    const { ctx, app } = this;
+    const { username, password } = ctx.request.body;
+    const user = await ctx.service.user.getUser(username, password)
+    if (user) {
+      console.log(app.jwt, "app.jwt")
+      const token = await this.jwtSign()
+      ctx.session[username] = 1;
+      ctx.body = {
+        status: 200,
+        data: {
+          ...ctx.helper.unPick(user.dataValues, ['password']),
+          createTime: ctx.helper.timestamp(user.creareTime),
+          token
+        }
+      }
+    } else {
+      ctx.body = {
+        status: 500,
+        errMsg: "密码错误"
+      }
+    }
+  }
 }
+
 
 module.exports = UserController;
