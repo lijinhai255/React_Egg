@@ -11,7 +11,7 @@ export default class ErrorBoundary extends Component {
   }
 
   static getDerivedStateFromError(error) {
-    console.log(error)
+    console.log(121212)
     return {
       flag: true
     }
@@ -21,10 +21,17 @@ export default class ErrorBoundary extends Component {
    * info: 带有 componentStack key 的对象，其中包含有关组件引发错误的栈信息
   */
   componentDidCatch(error, info) {
+    console.log(121212)
+
+    return {
+      flag: true
+    }
     
   }
 
   render() {
+    console.log(this.state.flag,"error-error")
+
     return (
       <div>
         {this.state.flag ? <h1 className='mk-error-page'>网络异常，请稍后再试！</h1> : this.props.children}
