@@ -33,4 +33,6 @@ module.exports = app => {
   router.post("/api/house/hot", controller.house.hot);//获取城市接口
   router.post("/api/house/search", controller.house.search);//获取城市接口
   router.post("/api/house/detail", controller.house.detail);//获取城市接口
+  router.post("/api/comments/add", controller.comments.add);//detail);//获取城市接口
+  router.post("/api/comments/lists", controller.comments.lists);//detail);//获取城市接口
 };
