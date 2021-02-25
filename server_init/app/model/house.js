@@ -10,16 +10,31 @@ module.exports = app => {
         info: STRING(50),
         addres: STRING(50),
         price: INTEGER,
-        publishTime: DATE,
+        publishTime: {
+            type: DATE,
+            get() {
+                return new Date(this.getDataValue('publishTime')).getTime()
+            }
+        },
         cityCode: STRING,
         showCount: INTEGER,
-        startTime: DATE,
-        endTime: DATE
+        startTime: {
+            type: DATE,
+            get() {
+                return new Date(this.getDataValue('startTime')).getTime()
+            }
+        },
+        endTime: {
+            type: DATE,
+            get() {
+                return new Date(this.getDataValue('endTime')).getTime()
+            }
+        }
     })
     // 一个房子 对应多个图片
-    House.associate = ()=>{
-        app.model.House.hasMany(app.model.Imgs,{
-            foreignKey:"houseId"
+    House.associate = () => {
+        app.model.House.hasMany(app.model.Imgs, {
+            foreignKey: "houseId"
         })
     }
     return House;

@@ -31,4 +31,6 @@ module.exports = app => {
   router.post("/api/user/edit", controller.user.userEdit);//编辑用户详情接口
   router.post("/api/commons/citys", controller.commons.city);//获取城市接口
   router.post("/api/house/hot", controller.house.hot);//获取城市接口
+  router.post("/api/house/search", controller.house.search);//获取城市接口
+  router.post("/api/house/detail", controller.house.detail);//获取城市接口
 };
