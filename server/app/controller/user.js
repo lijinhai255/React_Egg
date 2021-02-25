@@ -9,7 +9,7 @@ class UserController extends BaseController {
   async jwtSign({ id, username }) {
     const { ctx, app } = this;
     // const username = ctx.request.body.username;
-    const username = ctx.params('username');
+    // const username = ctx.params('username');
     const token = app.jwt.sign({
       id,
       username

@@ -2,7 +2,8 @@
 
 const Controller = require('egg').Controller;
 const md5 = require('md5');
-class UserController extends Controller {
+const BaseController = require('./base')
+class UserController extends BaseController {
   encode(str = '') {
     return new Buffer(str).toString("base64");
   }
@@ -176,110 +177,134 @@ class UserController extends Controller {
     };
   }
   // 新增 方法
-  async jwtSign() {
+  async jwtSign({ id,username }) {
     const { ctx, app } = this;
-    const username = ctx.request.body.username;
+    // const username = ctx.request.body.username;
+    // const username = ctx.params('username');
     const token = app.jwt.sign({
+      id,
       username
-    }, app.config.jwt.secret)
-    await app.redis.set(username, 1,'EX',app.config.redisExpire)
-    return token
+    }, app.config.jwt.secret);
+    // ctx.session[username] = 1;
+    await app.redis.set(username, token, 'EX', app.config.redisExpire);
+    return token;
+  }
+  parseResult(ctx,result) {
+    return {
+      ...ctx.helper.unPick(result.dataValues, ['password']),
+      createTime: ctx.helper.timestamp(result.createTime),
+    }
+
   }
   async register() {
     const { ctx, app } = this;
-    const params = ctx.request.body;
+    const params = ctx.params();
     // console.log(params,"params-params-params")
     const user = await ctx.service.user.getUser(params.username);
     if (user) {
-      ctx.body = {
-        status: 500,
-        errMsg: '用户已经存在'
-      }
+      this.error("用户已经存在")
+      // ctx.body = {
+      //   status: 500,
+      //   errMsg: '用户已经存在'
+      // }
       return;
     }
     // console.log(ctx.helper,"ctx.helper-ctx.helperctx.helper")
     const result = await ctx.service.user.addUser({
       ...params,
-      password: md5(params.password + app.config.salt),
-      createTime: ctx.helper.time()
+      ...this.parseResult(ctx,user)
     });
     // console.log(result,"result-result")
     if (result) {
       const token = await this.jwtSign()
-      ctx.body = {
-        status: 200,
-        data: {
-          ...ctx.helper.unPick(result.dataValues, ['password']),
-          createTime: ctx.helper.timestamp(result.createTime),
-          token
-        }
-      }
+      this.success({
+        ...this.parseResult(ctx,user),
+        token
+
+      })
+      // ctx.body = {
+      //   status: 200,
+      //   data: {
+         
+      //     token
+      //   }
+      // }
     } else {
-      ctx.body = {
-        status: 500,
-        errMsg: "用户注册失败"
-      }
+      this.error("用户注册失败")
+      // ctx.body = {
+      //   status: 500,
+      //   errMsg: "用户注册失败"
+      // }
     }
   }
   async login() {
     const { ctx, app } = this;
-    const { username, password } = ctx.request.body;
-    const user = await ctx.service.user.getUser(username, password)
+    const { username, password } = ctx.params();
+    const user = await ctx.service.user.getUser(username, password);
+
     if (user) {
-      console.log(app.jwt, "app.jwt")
-      const token = await this.jwtSign()
-      ctx.session[username] = 1;
-      ctx.body = {
-        status: 200,
-        data: {
-          ...ctx.helper.unPick(user.dataValues, ['password']),
-          createTime: ctx.helper.timestamp(user.creareTime),
-          token
-        }
-      }
+      const token = await this.jwtSign({
+        id: user.id,
+        username: user.username
+      });
+
+      this.success({
+        ...this.parseResult(ctx, user),
+        token
+      });
     } else {
-      ctx.body = {
-        status: 500,
-        errMsg: "密码错误"
-      }
+      this.error('该用户不存在');
     }
   }
   async detail() {
     const { ctx } = this;
     const user = await ctx.service.user.getUser(ctx.username)
     if (user) {
-      ctx.body = {
-        status: 200,
-        data: {
-          ...ctx.helper.unPick(user.dataValues, ['password']),
-          createTime: ctx.helper.timestamp(user.createTime)
-        }
-      }
+      this.success({
+        ...this.parseResult(ctx,user)
+      })
+      // ctx.body = {
+      //   status: 200,
+      //   data: {
+      //     ...this.parseResult(ctx,user)
+      //   }
+      // }
     } else {
-      ctx.body = {
-        status: 500,
-        errMsg: "该用户不存在"
-      }
+      this.error("该用户不存在")
+      // ctx.body = {
+      //   status: 500,
+      //   errMsg: "该用户不存在"
+      // }
     }
   }
   async logout(){
     const { ctx,app } = this;
     try{
       ctx.session[ctx.username] = null;
-      ctx.body = {
-        status:200,
-        data:"ok"
-      }
-      // await app.redis.del(ctx.username);
-      // this.success('ok');
+   
+      // ctx.body = {
+      //   status:200,
+      //   data:"ok"
+      // }
+      await app.redis.del(ctx.username);
+      this.success('ok');
       
     }catch(error){
-      // this.error('退出登录失败');
-      ctx.body = {
-        status:500,
-        errMsg:"退出登录失败"
-      }
+      this.error('退出登录失败');
+      // ctx.body = {
+      //   status:500,
+      //   errMsg:"退出登录失败"
+      // }
     }
+
+  }
+  async userEdit(){
+    const {ctx} = this;
+    const result =   ctx.service.user.userEdit({
+      ...ctx.params(),
+      updateTime:ctx.helper.time()
+    })
+    this.success(result)
 
   }
     

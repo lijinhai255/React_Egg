@@ -22,8 +22,11 @@ module.exports = app => {
   router.get('/curl/get', controller.curl.curlGet);
   router.post('/curl/post', controller.curl.curlPost);
   // 新增
+  const userExist = app.middleware.userExist();
+
   router.post("/api/user/register", controller.user.register);// 注册接口
   router.post("/api/user/login", controller.user.login); // 登录接口
-  router.post("/api/user/detail", controller.user.detail);//用户详情接口
+  router.post("/api/user/detail",userExist, controller.user.detail);//用户详情接口
   router.post("/api/user/logout", controller.user.logout);//用户详情接口
+  router.post("/api/user/edit", controller.user.userEdit);//编辑用户详情接口
 };

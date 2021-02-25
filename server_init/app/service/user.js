@@ -2,7 +2,9 @@
 
 const Service = require('egg').Service;
 const md5 = require('md5');
-class UserService extends Service {
+const BaseService = require('./base');
+
+class UserService extends BaseService {
   async lists() {
     try {
       const { app } = this;
@@ -70,33 +72,42 @@ class UserService extends Service {
   }
   // 新增 方法 ------
   // 查找用户
-  async getUser(username,password) {
-    try{
+  async getUser(username, password) {
+    return this.run(async () => {
       const { ctx, app } = this;
       const _where = password ? { username, password: md5(password + app.config.salt) } : { username };
       const result = await ctx.model.User.findOne({
         where: _where
       });
       return result
-    }catch(error) {
-      console.log(error);
-      return null;
-    }
+    })
+
 
   }
   // 新增方法
   async addUser(params) {
     // console.log(params,"jll")
-    try{
-      const {ctx} = this;
+    return this.run(async () => {
+      const { ctx } = this;
       const result = await ctx.model.User.create(params)
       // console.log(result,"result-result");
       return result
-    }catch(error){
-      console.log(error);
-      return null;
+    })
 
-    }
+  }
+  //修改用户信息 接口
+  async userEdit(params) {
+    console.log(params,"params-params-params");
+    return this.run(async () => {
+      const { ctx } = this;
+      const result = await ctx.model.User.update(params,
+        {
+          where: {
+            username: ctx.username
+          }
+        })
+        return result
+    })
 
   }
 }
