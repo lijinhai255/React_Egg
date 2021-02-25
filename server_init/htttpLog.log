@@ -413,3 +413,12 @@
 2021-02-25 16:20:27 [httpLog] {"method":"POST","url":"/api/comments/lists","data":{"id":"1","pageSize":8,"pageNum":1},"startTime":"2021-02-25 16:20:27","endTime":"2021-02-25 16:20:27","timeLength":49}
 2021-02-25 16:20:27 [httpLog] {"method":"POST","url":"/api/house/detail","data":{"id":"1"},"startTime":"2021-02-25 16:20:27","endTime":"2021-02-25 16:20:27","timeLength":58}
 2021-02-25 16:20:28 [httpLog] {"method":"POST","url":"/api/comments/lists","data":{"id":"1","pageSize":8,"pageNum":2},"startTime":"2021-02-25 16:20:28","endTime":"2021-02-25 16:20:28","timeLength":12}
+2021-02-25 16:23:07 [httpLog] {"method":"POST","url":"/api/comments/add","data":{"comment":"21212","houseId":"1"},"startTime":"2021-02-25 16:23:07","endTime":"2021-02-25 16:23:07","timeLength":49}
+2021-02-25 16:23:07 [httpLog] {"method":"POST","url":"/api/comments/lists","data":{"id":"1","pageSize":8,"pageNum":1},"startTime":"2021-02-25 16:23:07","endTime":"2021-02-25 16:23:07","timeLength":57}
+2021-02-25 16:23:07 [httpLog] {"method":"POST","url":"/api/comments/lists","data":{"id":"1","pageSize":8,"pageNum":2},"startTime":"2021-02-25 16:23:07","endTime":"2021-02-25 16:23:07","timeLength":11}
+2021-02-25 16:24:06 [httpLog] {"method":"POST","url":"/api/house/detail","data":{"id":"1"},"startTime":"2021-02-25 16:24:06","endTime":"2021-02-25 16:24:06","timeLength":32}
+2021-02-25 16:24:06 [httpLog] {"method":"POST","url":"/api/comments/lists","data":{"id":"1","pageSize":8,"pageNum":2},"startTime":"2021-02-25 16:24:06","endTime":"2021-02-25 16:24:06","timeLength":30}
+2021-02-25 16:24:06 [httpLog] {"method":"POST","url":"/api/comments/lists","data":{"id":"1","pageSize":8,"pageNum":1},"startTime":"2021-02-25 16:24:06","endTime":"2021-02-25 16:24:06","timeLength":32}
+2021-02-25 16:24:08 [httpLog] {"method":"POST","url":"/api/comments/lists","data":{"id":"1","pageSize":8,"pageNum":1},"startTime":"2021-02-25 16:24:08","endTime":"2021-02-25 16:24:08","timeLength":13}
+2021-02-25 16:24:08 [httpLog] {"method":"POST","url":"/api/house/detail","data":{"id":"1"},"startTime":"2021-02-25 16:24:08","endTime":"2021-02-25 16:24:08","timeLength":17}
+2021-02-25 16:24:08 [httpLog] {"method":"POST","url":"/api/comments/lists","data":{"id":"1","pageSize":8,"pageNum":2},"startTime":"2021-02-25 16:24:08","endTime":"2021-02-25 16:24:08","timeLength":12}

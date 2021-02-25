@@ -22,7 +22,7 @@ export default function (props) {
                 <p>{timer(item?.createTime)}</p>
               </div>
               <div className='right-bottom'>
-                {item?.info}
+                {item?.msg}
               </div>
             </div>
           </div>
