@@ -24,7 +24,7 @@ export default function (props) {
 
   const invokeHttp = async (pageNum) => {
     const result = await Http({
-      url: '/order/lists',
+      url: '/orders/lists',
       body: {
         ...page,
         pageNum,
@@ -36,7 +36,9 @@ export default function (props) {
 
   const fetchOrder = async (pageNum) => {
     const result = await invokeHttp(pageNum);
-    if (!isEmpty(result) && result.length === page.pageSize) {
+    if (!isEmpty(result) && result.length <= page.pageSize) {
+    console.log(result,"ljh");
+
       setOrders(result);
       setShowLoading(true);
     } else {
@@ -64,10 +66,11 @@ export default function (props) {
    * 4，拼装数据，然后page
    */
   useObserverHook('#' + CommonEnum.LOADING_ID, async (entries) => {
-    console.log(entries)
     if (entries[0].isIntersecting) {
       const result = await invokeHttp(page.pageNum + 1);
       if (!isEmpty(orders) && !isEmpty(result) && result.length === page.pageSize) {
+        console.log(result,"orders-orders")
+
         setOrders([...orders, ...result]);
         setPage({
           ...page,

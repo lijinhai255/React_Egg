@@ -12,5 +12,12 @@ module.exports = {
     const tokenCache =  token? this.app.jwt.verify(token,this.app.config.jwt.secret):undefined;
     // if(tokenCache)
     return tokenCache?tokenCache.username: undefined
-  }
+  },
+  get id(){
+    const token = this.request.header.token;
+    const tokenCache =  token? this.app.jwt.verify(token,this.app.config.jwt.secret):undefined;
+    // if(tokenCache)
+    return tokenCache?tokenCache.id: undefined
+  },
+
 };

@@ -179,8 +179,6 @@ class UserController extends BaseController {
   // 新增 方法
   async jwtSign({ id,username }) {
     const { ctx, app } = this;
-    // const username = ctx.request.body.username;
-    // const username = ctx.params('username');
     const token = app.jwt.sign({
       id,
       username
@@ -216,7 +214,10 @@ class UserController extends BaseController {
     });
     // console.log(result,"result-result")
     if (result) {
-      const token = await this.jwtSign()
+      const token = await this.jwtSign({
+        id:result.id,
+        username:result.username
+      })
       this.success({
         ...this.parseResult(ctx,user),
         token

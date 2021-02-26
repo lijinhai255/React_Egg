@@ -35,4 +35,11 @@ module.exports = app => {
   router.post("/api/house/detail", controller.house.detail);//获取城市接口
   router.post("/api/comments/add", controller.comments.add);//detail);//获取城市接口
   router.post("/api/comments/lists", controller.comments.lists);//detail);//获取城市接口
+  // 订单
+  router.post("/api/orders/hasOrder",userExist, controller.orders.hasOrder);//detail);//获取订单接口
+  router.post("/api/orders/addOrder", userExist,controller.orders.addOrder);//detail);//获取添加接口 /api/orders/delOrder
+  router.post("/api/orders/delOrder", userExist,controller.orders.delOrder);//detail);//获取添加接口 /api/orders/delOrder
+  router.post("/api/orders/lists", userExist,controller.orders.lists);//detail);//获取添加接口 /api/orders/delOrder
+  router.post("/api/orders/pay", userExist,controller.orders.pay);//detail);//获取添加接口 /api/orders/delOrder
+
 };
