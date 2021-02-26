@@ -94,6 +94,7 @@ module.exports = appInfo => {
       db:0
     }
   }
+  config.allowHosts = ['localhost:8000', '127.0.0.1:8000'];
 
   // add your user config here
   const userConfig = {

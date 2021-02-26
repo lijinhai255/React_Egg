@@ -303,7 +303,8 @@ class UserController extends BaseController {
     const {ctx} = this;
     const result =   ctx.service.user.userEdit({
       ...ctx.params(),
-      updateTime:ctx.helper.time()
+      updateTime:ctx.helper.time(),
+      sign:ctx.helper.escape(ctx.params("sign")
     })
     this.success(result)
 

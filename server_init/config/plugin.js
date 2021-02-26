@@ -44,3 +44,9 @@ exports.notFound = {
 
 
 }
+exports.allowHosts = {
+  enable: true,
+  path: path.join(__dirname, '../lib/plugin/egg-allowHosts')
+
+
+}
